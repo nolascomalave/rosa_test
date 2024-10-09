@@ -9,14 +9,14 @@ window.addEventListener("load", () => {
             alert('El número es requerido.');
         } else if(isNaN(value.trim())) {
             alert('El valor introducido no es un número.');
-        }
+        } else {
+            numbers.push(Number(value.trim()));
 
-        numbers.push(Number(value.trim()));
+            suma = suma + Number(value.trim());
 
-        suma = suma + Number(value.trim());
-
-        if(Number(value.trim()) < 0) {
-            break;
+            if(Number(value.trim()) < 0) {
+                break;
+            }
         }
     }
 
